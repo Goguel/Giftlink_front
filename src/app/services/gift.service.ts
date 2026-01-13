@@ -12,7 +12,7 @@ export interface Gift {
 
 @Injectable({ providedIn: 'root' })
 export class GiftService {
-  private apiUrl = 'http://localhost:8080/api/gifts'; 
+  private apiUrl = 'https://giftlink-production.up.railway.app/api/gifts';
 
   constructor(private http: HttpClient) {}
 
