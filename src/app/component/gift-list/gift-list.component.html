@@ -1,0 +1,16 @@
+<div class="gift-container">
+  <h2>Lista de Presentes do Casamento</h2>
+  
+  <div *ngIf="gifts.length === 0">Carregando presentes ou lista vazia...</div>
+
+  <div class="gift-grid">
+    <div *ngFor="let gift of gifts" class="gift-card">
+      <h3>{{ gift.name }}</h3>
+      <p>{{ gift.description }}</p>
+      <p><strong>Valor:</strong> {{ gift.value | currency:'BRL' }}</p>
+      <button [disabled]="gift.gifted" (click)="onGift(gift)">
+        {{ gift.gifted ? 'Já Presenteado' : 'Presentear' }}
+      </button>
+    </div>
+  </div>
+</div>

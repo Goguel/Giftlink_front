@@ -1,0 +1,7 @@
+<form (ngSubmit)="onSubmit()" #f="ngForm" class="form-container">
+  <input name="name" [(ngModel)]="newGift.name" placeholder="Nome do Presente" required>
+  <textarea name="description" [(ngModel)]="newGift.description" placeholder="Descrição"></textarea>
+  <input name="value" type="number" [(ngModel)]="newGift.value" placeholder="Valor (R$)" required>
+  
+  <button type="submit" [disabled]="!f.valid">Adicionar à Lista</button>
+</form>
